@@ -1,0 +1,571 @@
+*
+	box-sizing: border-box
+html, body 
+	margin: 0
+	height: 100%
+	font-family: Geometria-Medium
+	color: #ffffff
+@font-face
+	font-family: Geometria-ExtraBold
+	src: url(fonts/Geometria-ExtraBold.ttf)
+@font-face
+	font-family: Geometria-Medium
+	src: url(fonts/Geometria-Medium.ttf)
+@font-face
+	font-family: Gilroy-light
+	src: url(fonts/Gilroylight.ttf)
+
+a 
+	text-decoration: none
+.pointer
+	cursor: pointer
+.btn
+	border-radius: 5px
+	border: none
+	background: transparent
+	color: #ffffff
+	padding: 10px 20px
+	cursor: pointer
+	outline: none
+.btn-close
+	cursor: pointer
+.btn:hover
+	transition: .6s
+	background: #454972
+.active 
+	background: #2C3452
+
+.btn-menu-urgent
+	padding: 10px 20px
+	background: linear-gradient(270deg, #6082D7, #E73453)
+.btn-menu-urgent-active
+	background: #894672
+.btn-help-now
+	background: rgba(0,0,0,.2)
+	box-shadow: 0px 0px 15px 10px #9d5e9a
+
+.bg
+	display: flex
+	flex-direction: column
+	min-height: 100%
+	background: linear-gradient(-39deg, #4792E1, #4174B3, #363B5D)
+.content__wrap
+	flex: 1 0 auto
+	margin: 0 30px
+.container
+	// width: 1440px
+	margin: 0 auto
+
+.text
+	position: absolute
+	z-index: 1
+/* header*/
+.header
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	margin: 22px 0 0 0
+	align-items: center
+	justify-content: space-between
+	width: 100%
+	z-index: 3
+	&__lang
+		display: flex
+		color: #c5d5e6
+		font-family: "Geometria-Medium"
+		font-size: 14px
+		font-weight: 400
+		.lang-non-active
+			opacity: .5
+		.lang-active
+			opacity: 1
+		&__item+&__item
+			padding-left: 5px
+	&__menu
+		ul
+			padding: 0
+		ul, .btn-menu
+			margin: 0
+			display: flex
+			justify-content: space-around
+			align-items: center
+			list-style: none
+			color: #c5d5e6
+			font-family: "Geometria-Medium"
+			font-size: 14px
+			font-weight: 400
+			a 
+				text-decoration: none
+			li+li 
+				margin-left: 30px
+	&__search
+		display: flex
+		justify-content: center
+		
+		margin-left: 200px
+		padding: 10px
+		border-radius: 50%
+		#search-img
+			cursor: pointer
+			width: 30px
+	&__search:hover
+		transition: .5s
+		background: #454972
+
+	&__autorize
+		opacity: 0.5
+		color: #c5d5e6
+		font-family: "Geometria-Medium"
+		font-size: 14px
+		font-weight: 400
+/* /header*/
+/* search-bar*/
+
+.search-descr
+	padding-left: 30px
+	opacity: .5
+	color: #2e3f69
+	font-family: "Geometria-Medium"
+	font-size: 18px
+	font-weight: 400
+.search-bar
+	display: none
+	position: absolute
+	width: calc(100% - 60px)
+	top: 7px
+	display: none
+	align-items: center
+	background: rgba(197,213,230,0.5)
+	border-radius: 10px
+	padding: 5px 10px
+	backdrop-filter: blur(10px)
+	z-index: 3
+	animation: fadeEffect .4s
+	input 
+		width: 100%
+		height: 100%
+		outline: none
+		background: transparent
+		border: none
+		color: #ffffff
+		font-family: "Geometria-Medium"
+		font-size: 40px
+		font-weight: 400
+		text-align: center
+		padding-left: 10px
+	.close-search-wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 63px
+		height: 63px
+.search-popup
+	display: none
+	position: absolute
+	width: calc(100% - 60px)
+	height: 360px
+	background: rgba(197,213,230,0.5)
+	backdrop-filter: blur(10px)
+	border-radius: 10px
+	top: 95px
+	z-index: 4
+	animation: fadeEffect .4s
+/* /search-bar */
+.arrow-right
+	padding-left: 25px
+	cursor: pointer
+.content
+	position: relative
+	z-index: 3
+	flex-direction: column
+	margin: 126px 0 0 100px
+	&__title
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 50px
+		align-items: center
+		&__text 
+			padding-right: 47px
+			color: #ffffff
+			font-size: 64px
+			font-weight: 400
+		&__link
+			color: #C5D5E6
+	&__to-help
+		font-family: "Gilroy-Light"
+		font-size: 18px
+		font-weight: 400
+		line-height: 24px
+		&__text
+			max-width: 456px
+			padding-bottom: 29px
+		&__links
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			padding-bottom: 79px
+			color: #C5D5E6
+	&__to-help__line
+		width: 50px
+		height: 2px
+		background: #ffffff
+		margin-bottom: 15px
+	&__to-help-how
+		display: flex
+		padding-right: 40px
+		font-family: "Geometria-Medium"
+		color: #c5d5e6
+.how-you-can-help
+	margin: 0
+.bg-blur
+	display: none
+	align-items: center
+	position: absolute
+	top: 0
+	z-index: 99
+	width: 100%
+	height: 100%
+	background: rgba(197,213,230,0.5)
+	backdrop-filter: blur(10px)
+	animation: fadeEffect .5s
+.close-help
+	display: flex
+	justify-content: flex-end
+	z-index: 4
+.types-help
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	z-index: 4
+	width: 100%
+	min-height: 200px
+	max-height: 600px
+	border-radius: 15px
+	backdrop-filter: blur(10px)
+	background: #ffffff
+	box-shadow: 3px 4px 10px rgba(0,0,0,0.2)
+	padding: 50px 123px 109px 123px
+	&__title
+		padding-bottom: 35px
+		color: #363b5d
+		font-family: "Geometria-Medium"
+		font-size: 64px
+		font-weight: 400
+	&__content
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&__item-wrap
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		max-width: 20%
+		height: 100%
+	&__item
+		display: flex
+		align-items: center
+		height: 100%
+		.img-box
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 80px
+			height: 80px
+			border-radius: 15px
+			border: solid #c5d5e6
+		&-text
+			color: #515572
+			font-family: "Gilroy-Light"
+			font-size: 12px
+			font-weight: 400
+			line-height: 16px
+			width: 246px
+			padding-left: 100px
+		&__title
+			color: #363b5d
+			font-family: "Geometria-Medium"
+			font-size: 18px
+			font-weight: 400
+			padding-left: 20px
+.add-project-wrapper
+	display: flex
+	font-family: "Geometria-Medium"
+	color: #c5d5e6
+	padding-top: 33px
+	/* /content */
+	/*proj-content*/
+.proj-content-wrapper
+	animation: fadeEffect .6s
+
+.proj-content
+	transition: 1s
+.proj-titles
+	display: flex
+	justify-content: space-between
+	max-width: 80%
+	margin-left: -75px
+	margin-top: 50px
+	margin-bottom: 67px
+.proj-title
+	opacity: 0.15
+	color: #ffffff
+	font-family: "Geometria-Medium"
+	font-size: 64px
+	font-weight: 400
+.proj-title-active
+	opacity: 1
+
+
+
+.proj-help-types
+	.dropdown
+		display: none
+		width:	160px
+		height: 220px
+		background: black
+	.arrow-down
+		margin-left: 20px
+	display: flex
+	flex-direction: column
+	align-items: center
+	position: absolute
+	top: 186px
+	right: 30px
+	color: #c5d5e6
+	font-family: "Geometria-Medium"
+	font-size: 14px
+	font-weight: 400
+.proj-articles
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	margin-left: 150px
+	width: 80%
+	.article
+		height: 100px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		&-cover
+			overflow: hidden
+			justify-content: center
+			align-items: center
+			width: 400px
+			height: 100px
+			margin-right: 51px
+			background: rgba(216,216,216,0.5)
+		&-cover:hover
+		&-content
+			display: flex
+			flex-direction: column
+			flex-wrap: wrap
+			color: #ffffff
+			max-width: 600px
+			height: 100%
+			font-family: "Gilroy-Light"
+			font-size: 14px
+			font-weight: 400
+			line-height: 19px
+		&-date
+			color: #c5d5e6
+			font-family: "Gilroy-Light"
+			font-size: 12px
+			font-weight: 400
+			padding-top: 10px
+			padding-bottom: 16px
+		&-title
+			color: #ffffff
+			font-family: "Geometria-Medium"
+			font-size: 18px
+			font-weight: 400
+		&-text 
+			color: #ffffff
+			font-family: "Gilroy-Light"
+			font-size: 14px
+			font-weight: 400
+			line-height: 19px
+		&-raised
+			opacity: .5
+			color: #b4c4d8
+			font-family: "Gilroy-Light"
+			font-size: 18px
+			font-weight: 400
+	.article-active
+		height: 200px
+		overflow: visible
+		opacity: 1
+	/* /proj-content */
+
+	/* bottom-content */
+.social-wrapper
+	display: flex
+	align-items: center
+	padding-top: 139px
+.social-ico
+	margin-left: 20px
+.social-ico:hover
+	opacity: .5
+	transition: .2s
+	cursor: pointer
+.chat
+	position: absolute
+	right: 30px
+	bottom: 30px
+	z-index: 2
+
+.triangle-bottomright-wrap
+	flex: 0 0 auto
+	display: flex
+	align-items: flex-end
+	justify-content: flex-end
+	.heart
+		z-index: 2
+		position: absolute
+		right: 117px
+
+/* /bottom-content */
+/*media*/
+@media screen and (max-width: 1400px)
+	.header
+		flex-direction: column
+		&__logo
+			padding-bottom: 20px
+		&__lang
+			padding-bottom: 20px
+		&__menu
+			width: 100%
+			padding-bottom: 20px
+		&__search
+		ul
+			width: 100%
+	.social-wrapper
+		padding-top: 80px
+		color: #c5d5e6
+		font-family: "Geometria-ExtraBold"
+		font-size: 14px
+		font-weight: 400
+	#triangle-bottomright
+		display: none
+	.proj-titles
+		max-width: 90%
+	.proj-help-types
+		top: 325px
+@media screen and (max-width: 1100px)
+	.header
+		flex-direction: column
+		&__logo
+			padding-bottom: 20px
+		&__lang
+			padding-bottom: 20px
+		&__menu
+			width: 100%
+			padding-bottom: 20px
+		&__search
+			margin-left: 0
+		ul
+			width: 100%
+	.social-wrapper
+		padding-top: 80px
+		color: #c5d5e6
+		font-family: "Geometria-ExtraBold"
+		font-size: 14px
+		font-weight: 400
+	#triangle-bottomright
+		display: none
+	.proj-titles
+
+		max-width: 90%
+	.proj-title 
+		font-size: 32px
+	.proj-help-types
+		top: 325px
+
+@media screen and (max-width: 685px)
+	.header
+		flex-direction: column
+		&__logo
+			padding-bottom: 20px
+		&__lang
+			padding-bottom: 20px
+		&__menu
+			width: 100%
+			padding-bottom: 20px
+		ul
+			flex-wrap: wrap
+			width: 100%
+	.proj-title 
+		font-size: 26px
+	.proj-help-types
+		top: 375px
+@media screen and (max-width: 685px)
+	.header
+		flex-direction: column
+		&__logo
+			padding-bottom: 20px
+		&__lang
+			padding-bottom: 20px
+		&__menu
+			width: 100%
+			padding-bottom: 20px
+		ul
+			flex-wrap: wrap
+			width: 100%
+			li
+				display: flex
+				justify-content: center
+				width: 50%
+			li+li 
+				margin: 0
+	.social-wrapper
+		padding-bottom: 1rem
+	.header__search
+		margin-top: 15px
+	.btn-help-now
+		margin-top: 20px
+	.content__to-help__now
+		width: 100%
+@media screen and (max-width: 446px)
+	.header
+		flex-direction: column
+		&__logo
+			padding-bottom: 20px
+		&__lang
+			padding-bottom: 20px
+		&__menu
+			width: 100%
+			padding-bottom: 20px
+		ul
+			flex-wrap: wrap
+			width: 100%
+			li
+				display: flex
+				justify-content: center
+				width: 100%
+			li+li 
+				margin: 0
+	.header__search
+		margin-top: 15px
+	.social-wrapper
+		padding-bottom: 1rem
+	.proj-title 
+		font-size: 20px
+	.proj-help-types
+		top: 425px
+		font-size: 10px
+@media screen and (min-width: 1400px)
+	.clip-path
+		clip-path: polygon(0 100%, 0 0, 100% 0, 100% 25%, 25% 100%)
+	.header__lang
+		position: absolute
+		left: 100px
+		/* /media */
+
+@keyframes fadeEffect
+		from 
+			opacity: 0
+		to 
+			opacity: 1
+
+.show
+	display: block

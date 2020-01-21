@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<title>Добре Серце - Архів</title>
+
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</head>
+<body>
+	
+	<div class="bg">
+		
+		<div class="content__wrap">
+			<header id="header" class="header">
+				<div class="header__logo">
+					<a href="index.html"><img src="img/icons/heart.svg" alt="Logo"></a>
+				</div>
+				<div class="header__lang">
+					<div class="header__lang__ua header__lang__item lang-active">УКР</div>
+					<div class="header__lang__ru header__lang__item lang-non-active">РУС</div>
+					<div class="header__lang__en header__lang__item lang-non-active">EN</div>
+				</div>
+				<nav class="header__menu">
+					<ul>
+						<li class="nav-link "><a href="projects.html"><button id="btn" class="btn btn-menu">Проекти</button></a></li>
+						<li class="nav-link"><a href="archive.html"><button class="btn btn-menu active">Архів</button></a></li>
+						<li class="nav-link"><a href="contacts.html"><button class="btn btn-menu">Контакти</button></a></li>
+						<li class="nav-link disabled"><a href="urgent-help.html"><button class="btn btn-menu btn-menu-urgent">Термінова допомога</button></a></li>
+						<li><div class="header__search"><img id="search-img" src="img/icons/search.svg" alt="Search"></div></li>
+					</ul>
+				</nav>
+				
+				<div class="header__autorize">Вхід / Зареєструватися</div>
+
+			</header>
+
+			<div id="search-bar" class="search-bar">
+				<input type="text" id="search-input">
+				<div class="close-search-wrap">
+					<img id="close-search" class="btn-close" src="img/icons/close-img.svg" alt="close search">
+				</div>
+			</div>
+			<div class="search-popup" id="search-popup"></div>
+
+		</div>
+		<div class="chat"><img src="img/icons/chat.svg" alt="chat"></div>
+		<script src="js/index.js"></script>
+
+	</body>
