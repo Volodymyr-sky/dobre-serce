@@ -16,8 +16,14 @@ closeSearch.onclick = function () {
 	searchBar.style.display = "none";
 	searchPopup.style.display = "none";
 }
-searchInput.oninput = function () {
-	searchPopup.style.display = "flex";
+function addForm() {
+	document.getElementById("search-popup").style.display = "flex";
+}
+
+function removeForm() {
+	if (searchInput.value === "") {
+		searchPopup.style.display = "none";
+	}
 }
 closeTypesHelp.onclick = function () {
 	typesHelp.style.display = "none";
@@ -25,3 +31,4 @@ closeTypesHelp.onclick = function () {
 howToHelp.onclick = function () {
 	typesHelp.style.display = "flex";
 }
+

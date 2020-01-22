@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="ua">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Добре Серце</title>
 
 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="sass/main.css">
 
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+			':35729/livereload.js?snipver=1"></' + 'script>')
+	</script>
 </head>
+
 <body>
 	<div class="bg clip-path">
 
@@ -24,48 +29,81 @@
 				</div>
 				<nav class="header__menu">
 					<ul>
-						<li class="nav-link "><a href="projects.html"><button id="btn" class="btn btn-menu">Проекти</button></a></li>
+						<li class="nav-link "><a href="projects.html"><button id="btn"
+									class="btn btn-menu">Проекти</button></a></li>
 						<li class="nav-link"><a href="archive.html"><button class="btn btn-menu">Архів</button></a></li>
-						<li class="nav-link"><a href="contacts.html"><button class="btn btn-menu">Контакти</button></a></li>
-						<li class="nav-link disabled"><a href="urgent-help.html"><button class="btn btn-menu btn-menu-urgent">Термінова допомога</button></a></li>
-						<li><div class="header__search"><img id="search-img" src="img/icons/search.svg" alt="Search"></div></li>
+						<li class="nav-link"><a href="contacts.html"><button class="btn btn-menu">Контакти</button></a>
+						</li>
+						<li class="nav-link disabled"><a href="urgent-help.html"><button
+									class="btn btn-menu btn-menu-urgent">Термінова допомога</button></a></li>
+						<li>
+							<div class="header__search"><img id="search-img" src="img/icons/search.svg" alt="Search">
+							</div>
+						</li>
 					</ul>
 				</nav>
-				
+
 				<div class="header__autorize">Вхід / Зареєструватися</div>
 
 			</header>
 
 			<div id="search-bar" class="search-bar">
 				<div class="search-descr">Пошук</div>
-				<input type="text" id="search-input">
+				<input type="text" autocomplete="off" id="search-input" onkeyup="removeForm()" onkeypress="addForm()">
 				<div class="close-search-wrap">
 					<img id="close-search" class="btn-close" src="img/icons/close-img.svg" alt="close search">
 				</div>
 			</div>
-			<div class="search-popup" id="search-popup"></div>
+			<div class="search-popup" id="search-popup">
+				<div class="search-item">
+					<div class="search-title">Проекти</div>
+					<div class="search-kids search-col">
+						<div class="search-subtitle">Діти</div>
+						<div class="search-article">Для операції на сердце маленькому хлопчику, необхідно зібрати гроші
+							на ліки</div>
+						<div class="search-article">Збираємо гроші на лікування п’ятирічного Василя, який став жертвою
+							ДТП </div>
+					</div>
+					<div class="search-war search-col">
+						<div class="search-subtitle">Війна</div>
+						<div class="search-article">
+							Необхідно зібрати ліки для поранених бійців із зони АТО </div>
+					</div>
+				</div>
+				<div class="search-item">
+					<div class="search-title">Архів</div>
+					<div class="search-kids  search-col">
+						<div class="search-subtitle">Діти</div>
+						<div class="search-article">Необхідно купити ліки для дитячого будинку в місті Київ</div>
+					</div>
+				</div>
+			</div>
 
 
 			<div class="content" id="content-main">
 				<div class="content__title">
 					<div class="content__title__text">Добре Серце</div>
-					<div class="content__title__link">детальніше про проект</div><img class="arrow-right" src="img/icons/arrow-right.svg" alt="arrow"> 
+					<div class="content__title__link">детальніше про проект</div><img class="arrow-right"
+						src="img/icons/arrow-right.svg" alt="arrow">
 				</div>
 				<div class="content__to-help">
 					<div class="content__to-help__line"></div>
-					<div class="content__to-help__text">Вже зараз Ви можете допомогти тим, хто дійсно потребує допомоги</div>
+					<div class="content__to-help__text">Вже зараз Ви можете допомогти тим, хто дійсно потребує допомоги
+					</div>
 					<div class="content__to-help__links">
-						<div class="content__to-help-how pointer" id="how-to-help"><p class="how-you-can-help">Як Ви можете допомогти?</p>
-							<img class="arrow-right" src="img/icons/arrow-right.svg" alt="arrow"> 
+						<div class="content__to-help-how pointer" id="how-to-help">
+							<p class="how-you-can-help">Як Ви можете допомогти?</p>
+							<img class="arrow-right" src="img/icons/arrow-right.svg" alt="arrow">
 						</div>
-						
-						<div class="content__to-help__now"><button class="btn btn-help-now">Допомогти вже зараз</button></div>
+
+						<div class="content__to-help__now"><button class="btn btn-help-now">Допомогти вже зараз</button>
+						</div>
 					</div>
 					<div class="content__to-help__line"></div>
 					<div class="if-need-help">Якщо Вам необхідна допомога, додайте проект</div>
 					<div class="add-project-wrapper">
 						<div class="add-project pointer">Додати проект</div>
-						<img class="arrow-right" src="img/icons/arrow-right.svg" alt="arrow"> 
+						<img class="arrow-right" src="img/icons/arrow-right.svg" alt="arrow">
 					</div>
 					<div class="social-wrapper">
 						<div class="social">Розповісти всім:</div>
@@ -77,19 +115,20 @@
 			</div>
 
 		</div>
-		
 
-		
+
+
 	</div>
 
 
-	<div class="chat"><img src="img/icons/chat.svg" alt="chat"></div>
+	<div class="chat pointer"><img src="img/icons/chat.svg" alt="chat"></div>
 	<div class="triangle-bottomright-wrap">
 		<div class="heart"><img src="img/big-heart.png" alt="Heart"></div>
 	</div>
 	<div class="bg-blur" id="types-help">
 		<div class="container">
-			<div class="close-help"><img class="btn-close" id="close-types-help" src="img/icons/close-img.svg" alt="close"></div>
+			<div class="close-help"><img class="btn-close" id="close-types-help" src="img/icons/close-img.svg"
+					alt="close"></div>
 
 			<div id="types-help" class="types-help">
 
@@ -101,71 +140,48 @@
 							<div class="img-box"><img src="img/icons/types-help/hand.svg" alt="hand"></div>
 							<div class="types-help__item__title">Зробити</div>
 						</div>
-						<div class="types-help__item-text">								
+						<div class="types-help__item-text">
 							Натискайте цю кнопку,
 							якщо Ви хочете зробити,
-							наприклад: ремонт у 
+							наприклад: ремонт у
 							дитячому будинку,
 							складну операцію,
 							побудувати дитячий
 							майданчик або побудувати житло
 							для переселенців і тд.
 
-							Ця кнопка, для організацій, які можуть взяти на себе відповідальність за увесь проект. 
+							Ця кнопка, для організацій, які можуть взяти на себе відповідальність за увесь проект.
 						</div>
 					</div>
 					<div class="types-help__item-wrap">
 						<div class="types-help__item">
-							<div class="img-box"><img src="img/icons/types-help/hand.svg" alt="hand"></div>
-							<div class="types-help__item__title">Зробити</div>
+							<div class="img-box"><img src="img/icons/types-help/money.svg" alt="hand"></div>
+							<div class="types-help__item__title">Фінансова
+								допомога</div>
 						</div>
-						<div class="types-help__item-text">								
-							Натискайте цю кнопку,
-							якщо Ви хочете зробити,
-							наприклад: ремонт у 
-							дитячому будинку,
-							складну операцію,
-							побудувати дитячий
-							майданчик або побудувати житло
-							для переселенців і тд.
-
-							Ця кнопка, для організацій, які можуть взяти на себе відповідальність за увесь проект. 
+						<div class="types-help__item-text">
+							Перераховуйте гроші тим, хто дійсно потребує цього.
 						</div>
 					</div>
 					<div class="types-help__item-wrap">
 						<div class="types-help__item">
-							<div class="img-box"><img src="img/icons/types-help/hand.svg" alt="hand"></div>
-							<div class="types-help__item__title">Зробити</div>
+							<div class="img-box"><img src="img/icons/types-help/clothes.svg" alt="hand"></div>
+							<div class="types-help__item__title">Матеріальна
+								допомога</div>
 						</div>
-						<div class="types-help__item-text">								
-							Натискайте цю кнопку,
-							якщо Ви хочете зробити,
-							наприклад: ремонт у 
-							дитячому будинку,
-							складну операцію,
-							побудувати дитячий
-							майданчик або побудувати житло
-							для переселенців і тд.
-
-							Ця кнопка, для організацій, які можуть взяти на себе відповідальність за увесь проект. 
+						<div class="types-help__item-text">
+							Зберіть ліки, речі, їжу,
+							іграшки та інше, для тих, кому це необхідно.
 						</div>
 					</div>
 					<div class="types-help__item-wrap">
 						<div class="types-help__item">
-							<div class="img-box"><img src="img/icons/types-help/hand.svg" alt="hand"></div>
-							<div class="types-help__item__title">Зробити</div>
+							<div class="img-box"><img src="img/icons/types-help/heart.svg" alt="hand"></div>
+							<div class="types-help__item__title">Волонтерство</div>
 						</div>
-						<div class="types-help__item-text">								
-							Натискайте цю кнопку,
-							якщо Ви хочете зробити,
-							наприклад: ремонт у 
-							дитячому будинку,
-							складну операцію,
-							побудувати дитячий
-							майданчик або побудувати житло
-							для переселенців і тд.
-
-							Ця кнопка, для організацій, які можуть взяти на себе відповідальність за увесь проект. 
+						<div class="types-help__item-text">
+							Допоможіть ділом або професійними навичками.
+							Підтримайте проекти своєю роботою.
 						</div>
 					</div>
 
@@ -177,4 +193,5 @@
 	<script src="js/index.js"></script>
 
 </body>
-</html> 
+
+</html>

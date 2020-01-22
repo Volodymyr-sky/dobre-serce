@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="ua">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Добре Серце - Проекти</title>
 
 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="sass/main.css">
 
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+			':35729/livereload.js?snipver=1"></' + 'script>')
+	</script>
 </head>
+
 <body>
-	
+
 	<div class="bg">
 
 		<div class="content__wrap">
@@ -25,25 +30,55 @@
 				</div>
 				<nav class="header__menu">
 					<ul>
-						<li class="nav-link "><a href="projects.html"><button id="btn" class="btn btn-menu active">Проекти</button></a></li>
+						<li class="nav-link "><a href="projects.html"><button id="btn"
+									class="btn btn-menu active">Проекти</button></a></li>
 						<li class="nav-link"><a href="archive.html"><button class="btn btn-menu">Архів</button></a></li>
-						<li class="nav-link"><a href="contacts.html"><button class="btn btn-menu">Контакти</button></a></li>
-						<li class="nav-link disabled"><a href="urgent-help.html"><button class="btn btn-menu btn-menu-urgent">Термінова допомога</button></a></li>
-						<li><div class="header__search"><img id="search-img" src="img/icons/search.svg" alt="Search"></div></li>
+						<li class="nav-link"><a href="contacts.html"><button class="btn btn-menu">Контакти</button></a>
+						</li>
+						<li class="nav-link disabled"><a href="urgent-help.html"><button
+									class="btn btn-menu btn-menu-urgent">Термінова допомога</button></a></li>
+						<li>
+							<div class="header__search"><img id="search-img" src="img/icons/search.svg" alt="Search">
+							</div>
+						</li>
 					</ul>
 				</nav>
-				
+
 				<div class="header__autorize">Вхід / Зареєструватися</div>
 
 			</header>
 			<!-- 			search bar -->
 			<div id="search-bar" class="search-bar">
-				<input type="text" id="search-input">
+				<div class="search-descr">Пошук</div>
+				<input type="text" autocomplete="off" id="search-input" onkeyup="removeForm()" onkeypress="addForm()">
 				<div class="close-search-wrap">
 					<img id="close-search" class="btn-close" src="img/icons/close-img.svg" alt="close search">
 				</div>
 			</div>
-			<div class="search-popup" id="search-popup"></div>
+			<div class="search-popup" id="search-popup">
+				<div class="search-item">
+					<div class="search-title">Проекти</div>
+					<div class="search-kids search-col">
+						<div class="search-subtitle">Діти</div>
+						<div class="search-article">Для операції на сердце маленькому хлопчику, необхідно зібрати гроші
+							на ліки</div>
+						<div class="search-article">Збираємо гроші на лікування п’ятирічного Василя, який став жертвою
+							ДТП </div>
+					</div>
+					<div class="search-war search-col">
+						<div class="search-subtitle">Війна</div>
+						<div class="search-article">
+							Необхідно зібрати ліки для поранених бійців із зони АТО </div>
+					</div>
+				</div>
+				<div class="search-item">
+					<div class="search-title">Архів</div>
+					<div class="search-kids  search-col">
+						<div class="search-subtitle">Діти</div>
+						<div class="search-article">Необхідно купити ліки для дитячого будинку в місті Київ</div>
+					</div>
+				</div>
+			</div>
 			<!-- /search-bar -->
 
 			<!-- proj-content -->
@@ -54,16 +89,16 @@
 					<div class="proj-titles">
 						<div class="proj-title pointer">Війна</div>
 						<div class="proj-title pointer">Екологія</div>
-						<div class="proj-title pointer proj-title-active">Діти</div>
+						<div class="proj-title pointer proj-title-active">Діти
+							<div class="article-counter">24</div>
+						</div>
 						<div class="proj-title pointer">Освіта</div>
 
 					</div>
 
-					<div class="proj-help-types">
-						<button onclick="myFunction()" id="drop-btn" class="drop-btn pointer">Види допомоги
-							<img class="arrow-down" src="img/icons/arrow-down.svg" alt="open">
-						</button>
-						<div id="dropdown" class="dropdown">sds</div>
+					<div class="proj-help-types pointer">
+						Види допомоги
+						<img class="arrow-down" src="img/icons/arrow-down.svg" alt="open">
 					</div>
 					<div class="proj-articles">
 						<div class="article article-active">
@@ -71,33 +106,57 @@
 							<div class="article-content">
 								<div class="article-date">07.05.2019</div>
 								<div class="article-title">Необхідна допомога дитячому будинку</div>
-								<div class="article-text">Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.</div>
+								<div class="article-text">Перебуваючи у сиротинцях ці діти мають різного роду
+									матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто
+									має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про
+									свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія
+									цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.</div>
 								<div class="article-raised">Зібрано 10 000 з 25 000 UAH</div>
+							</div>
+							<div class="article-icons">
+								<img class="pointer" src="img/icons/projects/hand.svg" alt="to do">
+								<img class="pointer" src="img/icons/projects/money.svg" alt="financial">
+								<img class="pointer" src="img/icons/projects/clothes.svg" alt="clothes">
+								<img class="pointer" src="img/icons/projects/heart.svg" alt="volounteer">
 							</div>
 						</div>
 						<div class="article">
-							<div id="projArticle" class="article-cover"><img src="img/kids2.png" alt="kids"></div>
+							<div id="projArticle" class="article-cover pointer">
+								<div class="article-cover-mask"></div>
+								<img src="img/kids2.png" alt="kids">
+							</div>
+
 							<div class="article-content">
 								<div class="article-date">04.05.2019</div>
 								<div class="article-title">Операція дитині, яка постраждала в зоні АТО </div>
 							</div>
 						</div>
 						<div class="article">
-							<div class="article-cover"><img src="img/kids3.png" alt="kids"></div>
+							<div class="article-cover pointer">
+								<div class="article-cover-mask"></div>
+								<img src="img/kids3.png" alt="kids">
+							</div>
 							<div class="article-content">
 								<div class="article-date">07.05.2019</div>
-								<div class="article-title">Освітній загальний курс з основ WEB технологій для школярів</div>
+								<div class="article-title">Освітній загальний курс з основ WEB технологій для школярів
+								</div>
 							</div>
 						</div>
 						<div class="article">
-							<div class="article-cover"><img src="img/kids4.png" alt="kids"></div>
+							<div class="article-cover pointer">
+								<div class="article-cover-mask"></div>
+								<img src="img/kids4.png" alt="kids">
+							</div>
 							<div class="article-content">
 								<div class="article-date">03.05.2019</div>
 								<div class="article-title">Будування дитячого майданчику у місті Київ</div>
 							</div>
 						</div>
 						<div class="article">
-							<div class="article-cover"><img src="img/kids5.png" alt="kids"></div>
+							<div class="article-cover pointer">
+								<div class="article-cover-mask"></div>
+								<img src="img/kids5.png" alt="kids">
+							</div>
 							<div class="article-content">
 								<div class="article-date">03.05.2019</div>
 								<div class="article-title">Допомога дітям</div>
@@ -105,11 +164,12 @@
 						</div>
 					</div>
 
-				</div> 
+				</div>
 			</div>
+			<!-- /project-content -->
 
 		</div>
-		<div class="chat"><img src="img/icons/chat.svg" alt="chat"></div>
-		<script src="js/project.js"></script>
+		<div class="chat pointer"><img src="img/icons/chat.svg" alt="chat"></div>
+		<script src="js/index.js"></script>
 
-	</body>
+</body>
