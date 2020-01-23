@@ -96,7 +96,8 @@
 							<img class="arrow-right" src="img/icons/arrow-right.svg" alt="arrow">
 						</div>
 
-						<div class="content__to-help__now"><button class="btn btn-help-now">Допомогти вже зараз</button>
+						<div class="content__to-help__now"><button id=btn-help-now class="btn btn-help-now">Допомогти
+								вже зараз</button>
 						</div>
 					</div>
 					<div class="content__to-help__line"></div>
@@ -125,6 +126,7 @@
 	<div class="triangle-bottomright-wrap">
 		<div class="heart"><img src="img/big-heart.png" alt="Heart"></div>
 	</div>
+	<!-- how you can help -->
 	<div class="bg-blur" id="types-help">
 		<div class="container">
 			<div class="close-help"><img class="btn-close" id="close-types-help" src="img/icons/close-img.svg"
@@ -190,6 +192,175 @@
 			</div>
 		</div>
 	</div>
+	<!-- /how you can help -->
+	<!-- help right now -->
+	<div id="help-now" class="bg-blur-help-now">
+		<div class="btn-close"><img id="close-help-now" src="img/icons/close-img.svg" alt="close"></div>
+		<div class="help-now">
+			<div class="help-now__form">
+				<div class="help-now__title">Заповніть форму</div>
+				<div class="help-tab">
+					<button class="pointer tab-btn tab-left tab-active" id="tab-left">Фіз. особа</button><button
+						id="tab-right" class="tab-links pointer tab-btn tab-right" ">Юр. особа</button>
+				</div>
+			</div>
+			<div class=" person-form-wrapper">
+						<div class="person-form">
+							<div class="row">
+								<div class="col">Ім'я <input class="half m-r20" type="text" name="" id=""></div>
+								<div class="col">Прізвище <input class="half" type="text" name="" id=""></div>
+							</div>
+							Назва компанії, організації <div class="compay-input">
+								<input class="full" type="text" name="" id="">
+								<span class="plus-logo pointer">+ Логотип</span>
+							</div>
+							Email-адрес <input class="full" type="text" name="" id="">
+							Номер телефону <input class="full" type="text" name="" id="">
+						</div>
+						<div class="person-form">
+							Країна <input class="full" type="text" name="" id="">
+							<div class="row">
+								<div class="col">Місто<input class="half m-r20" type="text" name="" id=""></div>
+								<div class="col">Штат, район<input class="half" type="text" name="" id=""></div>
+							</div>
+							Адреса <input class="full" type="text" name="" id="">
+							Поштовий індекс<input class="half m-r20" type="text" name="" id="">
+						</div>
+				</div>
+				<div id="company-form-wrapper" class="company-form-wrapper">
+					<div class="company-form">
+
+						Юридична адреса <input class="full" type="text" name="" id="">
+						<div class="row">
+							<div class="col">Найменування банку<input class="half m-r20" type="text" name="" id="">
+							</div>
+							<div class="col">МФО Банку<input class="half" type="text" name="" id=""></div>
+						</div>
+						Розразунковий рахунок<input class="full" type="text" name="" id="">
+					</div>
+					<div class="company-form">
+						<div class="row">
+							<div class="col">ЗКПО<input class="half m-r20" type="text" name="" id=""></div>
+							<div class="col">Тип оподаткування<input class="half" type="text" name="" id=""></div>
+						</div>
+						<div class="row">
+							<div class="col">ІНН<input class="half m-r20" type="text" name="" id=""></div>
+							<div class="col">Система оподаткування<input class="half" type="text" name="" id=""></div>
+						</div>
+						<div class="row">
+							<div class="col">Телефон бухгалтерії<input class="half m-r20" type="text" name="" id="">
+							</div>
+							<div class="col">Факс<input class="half" type="text" name="" id=""></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="call-to-action">
+					<div class="cta__title">Види допомоги</div>
+					<div class="cta__subtitle">Ви можете змінити вид допомоги</div>
+					<div class="cta__types-help">
+						<div class="cta-item-wrapper"><img id="img-hand" class="pointer" src="img/cta/hand.svg"
+								alt="To do">Зробити</div>
+						<div class="cta-item-wrapper"><img id="img-money" class="pointer"
+								src="img/icons/types-help/money-active.svg" alt="To donate">Фінансова
+							допомога</div>
+						<div class="cta-item-wrapper"><img id="img-clothes" class="pointer" src="img/cta/clothes.svg"
+								alt="Clothes">Матеріальна
+							допомога</div>
+						<div class="cta-item-wrapper"><img id="img-heart" class="pointer" src="img/cta/heart.svg"
+								alt="Volounteer">Волонтерство</div>
+					</div>
+					<div id="arrow-money" class="modal-arrow-wrapper">
+						<div class="arrow-block-1"></div>
+						<div class="arrow-block-2"></div>
+						<div class="cta__modal-arrow">
+							<div class="pay-type">
+								<span class="pay-titles">Спосіб оплати</span>
+								<div class="pay-type-inner">
+									<img src="img/pay/visa.svg" alt="visa">
+									<img src="img/pay/privat.svg" alt="Privat24">
+									<img src="img/pay/terminal.svg" alt="terminal">
+									<img src="img/pay/web-money.svg" alt="web-moneya">
+									<img src="img/pay/paypal.svg" alt="paypal">
+									<img src="img/pay/bank.svg" alt="bank">
+								</div>
+							</div>
+							<div class="credit-card">
+								<span class="pay-titles">Введіть наступні данні</span>
+								<img src="img/pay/card.svg" alt="Card">
+							</div>
+						</div>
+					</div>
+					<div id="arrow-hand" class="modal-arrow-wrapper">
+						<div class="arrow-hand-1"></div>
+						<div class="arrow-hand-2"></div>
+						<div class="cta__modal-arrow">
+							<div class="pay-type">
+								<span class="pay-titles">Спосіб оплати</span>
+								<div class="pay-type-inner">
+									<img src="img/pay/visa.svg" alt="visa">
+									<img src="img/pay/privat.svg" alt="Privat24">
+									<img src="img/pay/terminal.svg" alt="terminal">
+									<img src="img/pay/web-money.svg" alt="web-moneya">
+									<img src="img/pay/paypal.svg" alt="paypal">
+									<img src="img/pay/bank.svg" alt="bank">
+								</div>
+							</div>
+							<div class="credit-card">
+								<span class="pay-titles">Введіть наступні данні</span>
+								<img src="img/pay/card.svg" alt="Card">
+							</div>
+						</div>
+					</div>
+					<div id="arrow-clothes" class="modal-arrow-wrapper">
+						<div class="arrow-clothes-1"></div>
+						<div class="arrow-clothes-2"></div>
+						<div class="cta__modal-arrow">
+							<div class="pay-type">
+								<span class="pay-titles">Спосіб оплати</span>
+								<div class="pay-type-inner">
+									<img src="img/pay/visa.svg" alt="visa">
+									<img src="img/pay/privat.svg" alt="Privat24">
+									<img src="img/pay/terminal.svg" alt="terminal">
+									<img src="img/pay/web-money.svg" alt="web-moneya">
+									<img src="img/pay/paypal.svg" alt="paypal">
+									<img src="img/pay/bank.svg" alt="bank">
+								</div>
+							</div>
+							<div class="credit-card">
+								<span class="pay-titles">Введіть наступні данні</span>
+								<img src="img/pay/card.svg" alt="Card">
+							</div>
+						</div>
+					</div>
+					<div id="arrow-heart" class="modal-arrow-wrapper">
+						<div class="arrow-heart-1"></div>
+						<div class="arrow-heart-2"></div>
+						<div class="cta__modal-arrow">
+							<div class="pay-type">
+								<span class="pay-titles">Спосіб оплати</span>
+								<div class="pay-type-inner">
+									<img src="img/pay/visa.svg" alt="visa">
+									<img src="img/pay/privat.svg" alt="Privat24">
+									<img src="img/pay/terminal.svg" alt="terminal">
+									<img src="img/pay/web-money.svg" alt="web-moneya">
+									<img src="img/pay/paypal.svg" alt="paypal">
+									<img src="img/pay/bank.svg" alt="bank">
+								</div>
+							</div>
+							<div class="credit-card">
+								<span class="pay-titles">Введіть наступні данні</span>
+								<img src="img/pay/card.svg" alt="Card">
+							</div>
+						</div>
+					</div>
+					<button class="to-help">Допомогти</button>
+				</div>
+			</div>
+		</div id="help-now">
+	</div>
+	<!-- help right now -->
+
 	<script src="js/index.js"></script>
 
 </body>

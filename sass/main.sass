@@ -29,6 +29,8 @@ a
 	outline: none
 .btn-close
 	cursor: pointer
+	display: flex
+	justify-content: flex-end
 .btn:hover
 	transition: .6s
 	background: #454972
@@ -304,15 +306,7 @@ a
 	&__item
 		display: flex
 		align-items: center
-		height: 100%
-		.img-box
-			display: flex
-			align-items: center
-			justify-content: center
-			min-width: 80px
-			min-height: 80px
-			border-radius: 15px
-			border: solid #c5d5e6
+		height: 100%		
 		&-text
 			color: #515572
 			font-family: "Gilroy-Light"
@@ -327,6 +321,264 @@ a
 			font-size: 18px
 			font-weight: 400
 			padding-left: 20px
+.img-box
+	display: flex
+	align-items: center
+	justify-content: center
+	min-width: 80px
+	min-height: 80px
+	max-width: 80px
+	max-height: 80px
+	border-radius: 15px
+	border: solid #c5d5e6
+// help right now		
+.bg-blur-help-now
+	display: none
+	// display: flex
+	flex-direction: column
+	padding: 0 50px
+	position: absolute
+	top: 0
+	z-index: 99
+	width: 100%
+	height: 100%
+	background: rgba(197,213,230,0.5)
+	backdrop-filter: blur(10px)
+	animation: fadeEffect .5s
+	.btn-close
+		margin-top: 30px
+.help-now
+	background: #ffffff
+	border-radius: 15px
+	padding: 28px 0 74px 0
+	box-shadow: 3px 4px 10px rgba(0,0,0,0.2)
+	&__form
+		display: flex
+		text-align: center
+		flex-direction: column
+	&__title
+		color: #363b5d
+		font-family: "Geometria-medium"
+		font-size: 64px
+		font-weight: 400
+		margin-bottom: 1px
+	.help-tab
+		margin-bottom: 50px
+		.tab-btn
+			border: none
+			outline: none
+			color: #363b5d
+			font-family: "Geometria-Medium"
+			font-size: 14px
+			font-weight: 400
+			background: #ffffff
+			padding: 10px 20px
+			border: 2px solid #363b5d
+		.tab-btn:hover
+			background: #363b5d
+			opacity: .8
+			color: #ffffff
+		.tab-left
+			border-radius: 5px 0 0 5px
+		.tab-right
+			border-radius: 0 5px 5px 0
+		.tab-active
+			color: #ffffff
+			background: #363b5d
+	.person-form-wrapper
+		display: flex
+		justify-content: space-around
+		color: #939aa3
+		font-family: "Geometria-Medium"
+		font-size: 14px
+		font-weight: 400
+		margin-bottom: 37px
+		flex-wrap: wrap
+		.person-form
+			display: flex
+			flex-direction: column
+.col
+	display: flex
+	flex-direction: column
+.row
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	margin-bottom: 33px
+.full
+	width: 420px
+	height: 40px
+	margin-bottom: 33px
+.half
+	width: 200px
+	height: 40px
+.m-r20
+	margin-right: 20px
+input
+	border-radius: 5px
+	border: none
+	outline-color: rgba(54, 59, 93, .3)
+	outline-width: 3px
+	background: #F3F7FA
+	font-size: 20px
+	padding: 0 10px
+	color: #363b5d
+.plus-logo
+	position: absolute
+	margin-left: 20px
+	margin-top: 14px
+	color: #4a90e2
+	opacity: .6
+	font-family: "Geometria-Medium"
+	font-size: 14px
+	font-weight: 400
+// /person-form-wrapper
+// company-form-wrapper
+.company-form-wrapper
+	display: none
+	justify-content: space-around
+	color: #939aa3
+	font-family: "Geometria-Medium"
+	font-size: 14px
+	font-weight: 400
+	margin-bottom: 37px
+	flex-wrap: wrap
+	.company-form
+		display: flex
+		flex-direction: column
+// /company-form-wrapper
+// call-to-action
+.call-to-action
+	color: black
+	.cta__title
+		color: #363b5d
+		font-family: "Geometria-medium"
+		font-size: 64px
+		font-weight: 400
+		text-align: center
+	.cta__subtitle
+		color: #363b5d
+		font-family: "Gilroy-Light"
+		font-size: 18px
+		font-weight: 400
+		text-align: center
+	.cta__types-help
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin: 36px auto 24px auto
+		justify-content: space-between
+		max-width: 1140px
+
+		.cta-item-wrapper
+			display: flex
+			align-items: center
+			max-width: 215px
+			img
+				margin-right: 20px
+	.cta__modal-arrow
+		display: flex
+		justify-content: space-between
+		width: 1140px
+		border: 1px solid #C5D5E6
+		border-radius: 15px
+		margin: 0 auto
+		padding: 18px 20px 0 20px
+		.pay-type
+			img
+				margin: 0 20px 20px 0
+	.pay-titles
+		color: #939aa3
+		font-family: "Geometria-Medium"
+		font-size: 14px
+		font-weight: 400
+		margin-bottom: 4px
+	.modal-arrow-wrapper
+		position: relative
+	.arrow-block-1
+		border-left: 1px solid #C5D5E6
+		border-radius: 5px 0 0 0
+		background: #ffffff
+		position: absolute
+		left: 627px
+		top: -9px
+		width: 20px
+		height: 20px
+		transform: rotate(45deg)
+	.arrow-block-2
+		border-right: 1px solid #C5D5E6
+		border-radius: 0 5px 0 0
+		position: absolute
+		left: 627px
+		top: -9px
+		width: 20px
+		height: 20px
+		transform: rotate(-45deg)
+	#arrow-hand
+		display: none
+	.arrow-hand-1
+		border-left: 1px solid #C5D5E6
+		border-radius: 5px 0 0 0
+		background: #ffffff
+		position: absolute
+		left: 344px
+		top: -9px
+		width: 20px
+		height: 20px
+		transform: rotate(45deg)
+	.arrow-hand-2
+		border-right: 1px solid #C5D5E6
+		border-radius: 0 5px 0 0
+		position: absolute
+		left: 344px
+		top: -9px
+		width: 20px
+		height: 20px
+		transform: rotate(-45deg)
+	#arrow-clothes
+		display: none
+	.arrow-clothes-1
+		border-left: 1px solid #C5D5E6
+		border-radius: 5px 0 0 0
+		background: #ffffff
+		position: absolute
+		left: 949px
+		top: -9px
+		width: 20px
+		height: 20px
+		transform: rotate(45deg)
+	.arrow-clothes-2
+		border-right: 1px solid #C5D5E6
+		border-radius: 0 5px 0 0
+		position: absolute
+		left: 949px
+		top: -9px
+		width: 20px
+		height: 20px
+		transform: rotate(-45deg)		
+	#arrow-heart
+		display: none
+	.arrow-heart-1
+		border-left: 1px solid #C5D5E6
+		border-radius: 5px 0 0 0
+		background: #ffffff
+		position: absolute
+		left: 1275px
+		top: -9px
+		width: 20px
+		height: 20px
+		transform: rotate(45deg)
+	.arrow-heart-2
+		border-right: 1px solid #C5D5E6
+		border-radius: 0 5px 0 0
+		position: absolute
+		left: 1275px
+		top: -9px
+		width: 20px
+		height: 20px
+		transform: rotate(-45deg)
+// /call-to-action
+// /help right now
 .add-project-wrapper
 	display: flex
 	font-family: "Geometria-Medium"
