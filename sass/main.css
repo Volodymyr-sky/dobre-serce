@@ -839,7 +839,7 @@ input {
   border-radius: 5px 0 0 0;
   background: #ffffff;
   position: absolute;
-  left: 627px;
+  left: 642px;
   top: -9px;
   width: 20px;
   height: 20px;
@@ -851,7 +851,7 @@ input {
   border-right: 1px solid #C5D5E6;
   border-radius: 0 5px 0 0;
   position: absolute;
-  left: 627px;
+  left: 642px;
   top: -9px;
   width: 20px;
   height: 20px;
@@ -868,7 +868,7 @@ input {
   border-radius: 5px 0 0 0;
   background: #ffffff;
   position: absolute;
-  left: 344px;
+  left: 365px;
   top: -9px;
   width: 20px;
   height: 20px;
@@ -880,7 +880,7 @@ input {
   border-right: 1px solid #C5D5E6;
   border-radius: 0 5px 0 0;
   position: absolute;
-  left: 344px;
+  left: 365px;
   top: -9px;
   width: 20px;
   height: 20px;
@@ -897,7 +897,7 @@ input {
   border-radius: 5px 0 0 0;
   background: #ffffff;
   position: absolute;
-  left: 949px;
+  left: 964px;
   top: -9px;
   width: 20px;
   height: 20px;
@@ -909,7 +909,7 @@ input {
   border-right: 1px solid #C5D5E6;
   border-radius: 0 5px 0 0;
   position: absolute;
-  left: 949px;
+  left: 964px;
   top: -9px;
   width: 20px;
   height: 20px;
@@ -926,7 +926,7 @@ input {
   border-radius: 5px 0 0 0;
   background: #ffffff;
   position: absolute;
-  left: 1275px;
+  left: 1290px;
   top: -9px;
   width: 20px;
   height: 20px;
@@ -938,12 +938,35 @@ input {
   border-right: 1px solid #C5D5E6;
   border-radius: 0 5px 0 0;
   position: absolute;
-  left: 1275px;
+  left: 1290px;
   top: -9px;
   width: 20px;
   height: 20px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.call-to-action .to-help-wrapper {
+  margin-top: 51px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.call-to-action .to-help-wrapper button.to-help {
+  padding: 18px 105px;
+  color: #ffffff;
+  font-family: "Geometria-Medium";
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(47deg, #E53656, #6082D8);
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(229, 54, 86, 0.4);
+          box-shadow: 0px 0px 15px 5px rgba(229, 54, 86, 0.4);
 }
 
 .add-project-wrapper {
