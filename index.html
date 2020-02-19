@@ -43,7 +43,7 @@
 					</ul>
 				</nav>
 
-				<div class="header__autorize">Вхід / Зареєструватися</div>
+				<div class="header__autorize btn" onclick="openAutorize()">Вхід / Зареєструватися</div>
 
 			</header>
 
@@ -78,8 +78,44 @@
 					</div>
 				</div>
 			</div>
+			<!-- autorize popup -->
+			<div class="autorize-popup-wrapper">
+					<div class="autorize-popup">
+						<div class="close-autorize"><img onclick="closeAutorize()" src="img/icons/close-img.svg"
+								alt="close autorize"></div>
+					<div class="login">
+						<input type="text" placeholder="Ім'я користувача">
+						<input type="password" placeholder="Пароль">
+						<button class="btn-login">Увійти</button>
+					</div>
+					<div class="create-account">
+						<div class="create-account__question">Не зареєстрований?</div>
+						<div class="create-account__link" onclick="openCreateAcc()">Свторити акаунт</div>
+					</div>
+				</div>
+			</div>
+			<!-- /autorize popup -->
+			<!-- createAcc popup -->
+			<div class="create-acc-popup-wrapper">
+				<div class="create-acc-popup">
+					<div class="close-create-acc"><img onclick="closeCreateAcc()" src="img/icons/close-img.svg"
+							alt="close registration"></div>
+					<div class="create-acc">
+						<input type="text" placeholder="Ім'я користувача">
+						<input type="text" placeholder="E-mail">
+						<input type="text" placeholder="Номер телефону">
+						<input type="password" placeholder="Пароль">
+						<button class="btn-create-acc">Зареєструватись</button>
+					</div>
+					<div class="to-login">
+						<div class="to-login__question">Вже зареєстрований?</div>
+						<div class="to-login__link" onclick="openAutorize()">Вхід</div>
+					</div>
+				</div>
+			</div>
+			<!-- /createAcc popup -->
 
-
+			<!-- content -->
 			<div class="content" id="content-main">
 				<div class="content__title">
 					<div class="content__title__text">Добре Серце</div>
@@ -201,10 +237,10 @@
 				<div class="help-now__title">Заповніть форму</div>
 				<div class="help-tab">
 					<button class="pointer tab-btn tab-left tab-active" id="tab-left">Фіз. особа</button><button
-						id="tab-right" class="tab-links pointer tab-btn tab-right" ">Юр. особа</button>
-				</div>
-			</div>
-			<div class=" person-form-wrapper">
+						id="tab-right" class="tab-links pointer tab-btn tab-right" ">Юр. особа</button.>
+							</div>
+						</div>
+						<div class=" person-form-wrapper">
 						<div class="person-form">
 							<div class="row">
 								<div class="col">Ім'я <input class="half m-r20" type="text" name="" id=""></div>
@@ -259,16 +295,77 @@
 					<div class="cta__title">Види допомоги</div>
 					<div class="cta__subtitle">Ви можете змінити вид допомоги</div>
 					<div class="cta__types-help">
-						<div class="cta-item-wrapper"><img id="img-hand" class="pointer" src="img/cta/hand.svg"
-								alt="To do">Зробити</div>
-						<div class="cta-item-wrapper"><img id="img-money" class="pointer"
+						<div class="cta-item-wrapper hand">
+							<div id="img-hand" class="img-item poiner">
+								<svg width="33px" height="40px" viewBox="0 0 33 40" version="1.1"
+									xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+									<desc>Created with Lunacy</desc>
+									<path id="path-hand"
+										d="M32.3359 12.7529L29.5406 31.7271C29.2629 33.1671 28.6253 33.7976 28.1617 34.2588C27.7123 34.7059 27.4135 35.0024 27.4135 36.4541L27.4135 38.8235C27.4135 39.4729 26.8864 40 26.237 40C25.5876 40 25.0606 39.4729 25.0606 38.8235L25.0606 36.4541C25.0606 34.2071 25.7147 33.3741 26.5053 32.5906C26.87 32.2282 27.0888 32.0094 27.2206 31.3341L30.0088 12.4188C30.0512 12.1294 30.1288 11.1482 29.3664 11.0424C29.1029 11.0047 28.8888 11.0471 28.7194 11.1765C28.4935 11.3435 28.3335 11.6682 28.277 12.0659L27.1076 19.8682C27.0488 20.2706 26.7829 20.6118 26.4112 20.7741C26.0394 20.9365 25.6088 20.8918 25.2723 20.6588C25.1547 20.6776 24.957 20.6047 24.7594 20.4753C24.4017 20.2471 24.197 19.8447 24.2206 19.4212L24.8912 6.98353C24.9453 6.32941 24.4912 5.78588 23.8747 5.73176C23.5759 5.70353 23.2888 5.79765 23.0606 5.98824C22.83 6.18118 22.6935 6.44941 22.6676 6.74353L21.5782 17.9953C21.517 18.6282 21.0159 19.0871 20.3288 19.0565C20.1382 19.0447 19.9453 19.0329 19.75 19.0306C19.117 19.0165 18.6088 18.5059 18.597 17.8753L18.3264 3.47765C18.3264 2.84706 17.8323 2.35294 17.2253 2.35294C16.6182 2.35294 16.1241 2.84706 16.1241 3.45412L15.8464 18.9506C15.837 19.3976 15.5782 19.8024 15.1735 19.9929C15.0276 20.0635 14.8864 20.1341 14.7523 20.2094C14.4064 20.4071 13.9853 20.4141 13.6323 20.2282C13.2794 20.0447 13.0417 19.6941 13.0017 19.2988L11.79 6.76C11.7641 6.45176 11.6253 6.18353 11.3994 5.99294C11.1712 5.80235 10.8629 5.71529 10.5876 5.73647C10.2912 5.76235 10.0253 5.90118 9.83468 6.12941C9.64645 6.35529 9.55468 6.64235 9.58057 6.93647L10.7641 23.6353C10.8017 24.1482 10.4982 24.6282 10.0182 24.8141C9.53351 25.0024 8.98763 24.8541 8.66998 24.4494L5.02057 19.8541C4.54292 19.0541 3.69821 18.8306 3.0441 19.2094C2.7241 19.3953 2.49586 19.6918 2.40174 20.0471C2.30763 20.4 2.35468 20.7718 2.54292 21.0894L10.8464 35.4118C11.0347 35.7388 11.3429 35.9671 11.71 36.0565C12.237 36.1835 12.6088 36.6565 12.6088 37.2L12.6088 38.8235C12.6088 39.4729 12.0817 40 11.4323 40C10.7829 40 10.2559 39.4729 10.2559 38.8235L10.2559 38C9.65821 37.6776 9.16174 37.1976 8.81115 36.5929L0.505272 22.2706C0.00409599 21.4094 -0.130022 20.4047 0.128802 19.4424C0.382919 18.4776 1.00174 17.6729 1.86763 17.1718C3.65115 16.1435 5.93351 16.7553 6.95939 18.5341L8.14998 20.0259L7.23468 7.12471C7.15468 6.22588 7.43704 5.32706 8.02998 4.61647C8.62292 3.91059 9.46057 3.47529 10.3806 3.39294C11.3147 3.30824 12.2041 3.59765 12.9147 4.19294C13.2582 4.48235 13.5335 4.82588 13.7382 5.20706L13.7712 3.43529C13.7712 1.54824 15.3217 0 17.2253 0C19.1288 0 20.6794 1.55059 20.6794 3.45647L20.7123 5.21176C20.9194 4.82824 21.197 4.48235 21.5429 4.19059C22.2559 3.59294 23.1617 3.30588 24.0794 3.39059C25.9876 3.55765 27.4017 5.24471 27.2347 7.15059L27.11 9.45177C27.1712 9.39765 27.237 9.34588 27.3006 9.29647C27.9782 8.78823 28.7994 8.59059 29.6959 8.71294C31.5429 8.96941 32.6323 10.6329 32.3359 12.7529L32.3359 12.7529Z"
+										id="Shape" fill="#C5D5E6" stroke="none" />
+								</svg>
+							</div>
+							Зробити
+						</div>
+						<div class="cta-item-wrapper hand">
+							<div id="img-money" class="img-item poiner icon-bg-active">
+
+								<svg width="40px" height="33px" viewBox="0 0 40 33" version="1.1"
+									xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+									<desc>Created with Lunacy</desc>
+									<path id="path-money" class="icon-color"
+										d="M0.0329412 3.61882C0.0329412 1.62353 1.67059 0 3.68 0L40 0L40 29.0824L35.3929 29.0824L35.3929 32.9765L3.64706 32.9765C1.63529 32.9765 0 31.3529 0 29.3576L0 3.61882L0.0329412 3.61882ZM35.3938 4.65647L35.3938 14.1506L37.6479 14.1506L37.6479 2.35294L3.68084 2.35294C2.97025 2.35294 2.38907 2.91999 2.38672 3.61882C2.38672 4.33411 3.03848 4.65647 3.68084 4.65647L35.3938 4.65647ZM3.64763 30.6212C2.93469 30.6212 2.35352 30.0541 2.35352 29.3553L2.35352 6.80705C2.40999 6.82352 2.48057 6.81882 2.53705 6.83529C2.87352 6.93411 3.22646 6.99529 3.60293 7.00235C3.6194 7.00235 3.63116 7.00941 3.64763 7.00941L33.0429 7.00941L33.0429 14.1506L26.3159 14.1506C24.2876 14.1506 22.6382 15.7341 22.6382 17.68L22.6382 20.0329C22.6382 21.9788 24.2876 23.5623 26.3159 23.5623L33.0429 23.5623L33.0429 30.6212L3.64763 30.6212ZM24.9883 20.0329C24.9883 20.6823 25.5812 21.2094 26.313 21.2094L37.6471 21.2094L37.6471 16.5035L26.313 16.5035C25.5836 16.5035 24.9883 17.0306 24.9883 17.68L24.9883 20.0329ZM37.6467 26.7271L35.3926 26.7271L35.3926 23.5623L37.6467 23.5623L37.6467 26.7271Z"
+										id="Shape" fill="#C5D5E6" fill-rule="evenodd" stroke="none" />
+								</svg>
+							</div>
+							Фінансова
+							допомога
+						</div>
+						<div class="cta-item-wrapper hand">
+							<div id="img-clothes" class="img-item poiner">
+								<svg width="40px" height="56px" viewBox="0 0 40 56" version="1.1"
+									xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+									<desc>Created with Lunacy</desc>
+									<g>
+										<path class="path-clothes"
+											d="M16.0343 28.6532L10.0962 28.6532L10.0962 1.94175L13.7651 1.94175C14.2328 4.90809 16.8065 7.18395 19.9021 7.18395C22.9978 7.18395 25.5715 4.90809 26.0394 1.94175L29.7078 1.94175L29.7078 16.8092C29.7078 17.3454 30.1425 17.7801 30.6787 17.7801C31.2149 17.7801 31.6496 17.3454 31.6496 16.8092L31.6496 14.1921L33.739 15.2368C33.8777 15.3061 34.026 15.3393 34.1727 15.3393C34.4798 15.3393 34.7792 15.1935 34.9665 14.9282L39.6265 8.3266C39.9183 7.91314 39.8436 7.34485 39.4549 7.02084L31.3038 0.228479C31.1349 0.0860841 30.9169 0 30.6787 0L9.12532 0C8.88674 0 8.66862 0.086343 8.49956 0.229126L0.349396 7.02084C-0.0393414 7.34485 -0.114163 7.91314 0.177746 8.3266L4.83781 14.9282C5.02512 15.1934 5.32454 15.3393 5.6316 15.3393C5.77813 15.3393 5.92648 15.306 6.06525 15.2368L8.15457 14.1921L8.15457 29.6241C8.15457 30.1603 8.58927 30.595 9.12545 30.595L16.0344 30.595C16.5706 30.595 17.0053 30.1603 17.0053 29.6241C17.0053 29.0879 16.5705 28.6532 16.0343 28.6532ZM19.9013 5.24223C17.8799 5.24223 16.1832 3.83057 15.7422 1.94177L24.0604 1.94177C23.6193 3.8307 21.9226 5.24223 19.9013 5.24223ZM2.28125 7.93888L5.94339 13.1268L8.15491 12.0211L8.15491 3.04425L2.28125 7.93888ZM31.6504 12.0211L33.8619 13.1268L37.524 7.93888L31.6504 3.04425L31.6504 12.0211Z"
+											id="Shape" fill="#C5D5E6" fill-rule="evenodd" stroke="none" />
+										<path class="path-clothes"
+											d="M0.970874 0L20.4914 0C21.0276 0 21.4623 0.434563 21.462 0.970874L21.462 35.1811C21.462 35.7173 21.0273 36.152 20.4911 36.152L13.0153 36.152C12.5001 36.152 12.0746 35.7494 12.046 35.235L10.731 11.5784L9.41605 35.235C9.38757 35.7495 8.96194 36.152 8.44673 36.152L0.970874 36.152C0.434693 36.152 0 35.7173 0 35.1811L0 0.970874C0 0.434693 0.434693 0 0.970874 0ZM5.00289 1.94177L5.00289 4.11459L1.94141 4.11459L1.94141 1.94177L5.00289 1.94177ZM6.94531 1.94177L6.94531 4.11459L14.5176 4.11459L14.5176 1.94177L6.94531 1.94177ZM19.5205 4.11459L16.459 4.11459L16.459 1.94177L19.5205 1.94177L19.5205 4.11459ZM12.6138 10.4695L13.9335 34.2101L19.5202 34.2101L19.5202 6.05634L1.94141 6.05634L1.94141 34.2101L7.52807 34.2101L8.84768 10.4695C8.87616 9.95498 9.30179 9.55252 9.81701 9.55252L11.6444 9.55252C12.1597 9.55252 12.5852 9.95511 12.6138 10.4695Z"
+											transform="translate(18.18359 18.90784)" id="Shape" fill="#C5D5E6"
+											fill-rule="evenodd" stroke="none" />
+									</g>
+								</svg>
+							</div>
+							Матеріальна
+							допомога
+						</div>
+						<div class="cta-item-wrapper hand">
+							<div id="img-heart" class="img-item poiner">
+								<svg width="39px" height="37px" viewBox="0 0 39 37" version="1.1"
+									xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+									<desc>Created with Lunacy</desc>
+									<g>
+										<path class="path-heart"
+											d="M0.718223 2.09561C2.23629 2.634 3.46202 3.86302 4.00041 5.38108C4.15682 5.82452 4.57332 6.10079 5.01675 6.10079C5.13649 6.10079 5.25838 6.08031 5.37711 6.0382C5.93814 5.83969 6.23275 5.22252 6.03423 4.66137C5.27141 2.50338 3.5958 0.826761 1.43996 0.0616587C0.877793 -0.135844 0.261767 0.156617 0.0621144 0.717641C-0.136273 1.27993 0.156061 1.89608 0.718223 2.09561Z"
+											transform="translate(28.06055 4.68689)" id="Shape" fill="#C5D5E6"
+											stroke="none" />
+										<path class="path-heart"
+											d="M18.9048 36.5536C19.0666 36.6409 19.2435 36.6852 19.4215 36.6852C19.5996 36.6852 19.7776 36.6409 19.9383 36.5536C32.2181 29.8553 38.8431 18.8357 38.8431 11.8688C38.8431 5.32372 33.5195 8.98426e-16 26.9743 8.98426e-16C22.3779 8.98426e-16 18.1526 2.69208 16.2115 6.86012C15.959 7.40066 16.1932 8.04274 16.7327 8.2941C17.2733 8.54661 17.9153 8.31143 18.1667 7.7719C19.7561 4.36125 23.213 2.15799 26.9744 2.15799C32.3294 2.15799 36.6852 6.5138 36.6852 11.8688C36.6852 18.2034 30.2404 28.2692 19.4217 34.3718C8.60275 28.2692 2.15799 18.2035 2.15799 11.8688C2.15799 6.5138 6.51494 2.15799 11.8688 2.15799C13.2207 2.15799 14.5285 2.42984 15.7574 2.96722C16.3033 3.20569 16.9388 2.95748 17.1783 2.41151C17.4168 1.86553 17.1676 1.23003 16.6216 0.990548C15.1197 0.333428 13.5206 0 11.8688 0C5.32474 0 0 5.3236 0 11.8688C0 18.8357 6.62608 29.8553 18.9048 36.5536Z"
+											id="Shape" fill="#C5D5E6" stroke="none" />
+									</g>
+								</svg>
+							</div>
+							Волонтерство
+						</div>
+						<!-- <div class="cta-item-wrapper"><img id="img-money" class="pointer"
 								src="img/icons/types-help/money-active.svg" alt="To donate">Фінансова
 							допомога</div>
 						<div class="cta-item-wrapper"><img id="img-clothes" class="pointer" src="img/cta/clothes.svg"
 								alt="Clothes">Матеріальна
 							допомога</div>
 						<div class="cta-item-wrapper"><img id="img-heart" class="pointer" src="img/cta/heart.svg"
-								alt="Volounteer">Волонтерство</div>
+							alt="Volounteer">Волонтерство</div> -->
 					</div>
 					<div id="arrow-money" class="modal-arrow-wrapper">
 						<div class="arrow-block-1"></div>
@@ -287,7 +384,27 @@
 							</div>
 							<div class="credit-card">
 								<span class="pay-titles">Введіть наступні данні</span>
-								<img src="img/pay/card.svg" alt="Card">
+								<div class="the-card">
+									<div class="card-top">
+										<div class="card-top-title">Номер карти</div>
+										<div class="card-top-inputs">
+											<input id="credit-n-1" class="max-4" name="number" maxlength="4"
+												onkeyup="moveFocus(this, 'credit-n-2')">
+											<input id="credit-n-2" class="max-4" name="number" maxlength="4"
+												onkeyup="moveFocus(this, 'credit-n-3')">
+											<input id="credit-n-3" class="max-4" name="number" maxlength="4"
+												onkeyup="moveFocus(this, 'credit-n-4')">
+											<input id="credit-n-4" class="max-4" name="number" maxlength="4"
+												onkeyup="moveFocus(this, 'date')">
+										</div>
+									</div>
+									<div class="card-bottom">
+										<div class="card-date">Термін дії <input id="date" maxlength="1" type="text"
+												onkeyup="moveFocus(this, 'cvc')"></div>
+										<div class="CVC">CVC/CVV <input id="cvc" name="number" type="password"
+												maxlength="3"> </div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -308,7 +425,22 @@
 							</div>
 							<div class="credit-card">
 								<span class="pay-titles">Введіть наступні данні</span>
-								<img src="img/pay/card.svg" alt="Card">
+								<div class="the-card">
+									<div class="card-top">
+										<div class="card-top-title">Номер карти</div>
+										<div class="card-top-inputs">
+											<input class="max-4" name="number" maxlength="4">
+											<input class="max-4" name="number" maxlength="4">
+											<input class="max-4" name="number" maxlength="4">
+											<input class="max-4" name="number" maxlength="4">
+										</div>
+									</div>
+									<div class="card-bottom">
+										<div class="card-date">Термін дії <input type="text"></div>
+										<div class="CVC">CVC/CVV <input name="number" type="password" maxlength="3">
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -329,7 +461,22 @@
 							</div>
 							<div class="credit-card">
 								<span class="pay-titles">Введіть наступні данні</span>
-								<img src="img/pay/card.svg" alt="Card">
+								<div class="the-card">
+									<div class="card-top">
+										<div class="card-top-title">Номер карти</div>
+										<div class="card-top-inputs">
+											<input class="max-4" name="number" maxlength="4">
+											<input class="max-4" name="number" maxlength="4">
+											<input class="max-4" name="number" maxlength="4">
+											<input class="max-4" name="number" maxlength="4">
+										</div>
+									</div>
+									<div class="card-bottom">
+										<div class="card-date">Термін дії <input type="text"></div>
+										<div class="CVC">CVC/CVV <input name="number" type="password" maxlength="3">
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -350,7 +497,23 @@
 							</div>
 							<div class="credit-card">
 								<span class="pay-titles">Введіть наступні данні</span>
-								<img src="img/pay/card.svg" alt="Card">
+								<div class="the-card">
+									<div class="card-top">
+										<div class="card-top-title">Номер карти</div>
+										<div class="card-top-inputs">
+											<input class="max-4" name="number" maxlength="4">
+											<input class="max-4" name="number" maxlength="4">
+											<input class="max-4" name="number" maxlength="4">
+											<input class="max-4" name="number" maxlength="4">
+										</div>
+									</div>
+									<div class="card-bottom">
+										<div class="card-date">Термін дії <input id="date" name="card-date" type="text">
+										</div>
+										<div class="CVC">CVC/CVV <input name="number" type="password" maxlength="3">
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -363,6 +526,11 @@
 	</div>
 	<!-- help right now -->
 
+
+
+	<!--scripts links  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/index.js"></script>
 
 </body>

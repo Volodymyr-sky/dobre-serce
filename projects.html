@@ -44,7 +44,7 @@
 					</ul>
 				</nav>
 
-				<div class="header__autorize">Вхід / Зареєструватися</div>
+				<div class="header__autorize btn" onclick="openAutorize()">Вхід / Зареєструватися</div>
 
 			</header>
 			<!-- 			search bar -->
@@ -80,6 +80,42 @@
 				</div>
 			</div>
 			<!-- /search-bar -->
+			<!-- autorize popup -->
+			<div class="autorize-popup-wrapper">
+				<div class="autorize-popup">
+					<div class="close-autorize"><img onclick="closeAutorize()" src="img/icons/close-img.svg"
+							alt="close autorize"></div>
+				<div class="login">
+					<input type="text" placeholder="Ім'я користувача">
+					<input type="password" placeholder="Пароль">
+					<button class="btn-login">Увійти</button>
+				</div>
+				<div class="create-account">
+					<div class="create-account__question">Не зареєстрований?</div>
+					<div class="create-account__link" onclick="openCreateAcc()">Свторити акаунт</div>
+				</div>
+			</div>
+		</div>
+		<!-- /autorize popup -->
+		<!-- createAcc popup -->
+		<div class="create-acc-popup-wrapper">
+			<div class="create-acc-popup">
+				<div class="close-create-acc"><img onclick="closeCreateAcc()" src="img/icons/close-img.svg"
+						alt="close registration"></div>
+				<div class="create-acc">
+					<input type="text" placeholder="Ім'я користувача">
+					<input type="text" placeholder="E-mail">
+					<input type="text" placeholder="Номер телефону">
+					<input type="password" placeholder="Пароль">
+					<button class="btn-create-acc">Зареєструватись</button>
+				</div>
+				<div class="to-login">
+					<div class="to-login__question">Вже зареєстрований?</div>
+					<div class="to-login__link" onclick="openAutorize()">Вхід</div>
+				</div>
+			</div>
+		</div>
+		<!-- /createAcc popup -->
 
 			<!-- proj-content -->
 			<div class="proj-content-wrapper">

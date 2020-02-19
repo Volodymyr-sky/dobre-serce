@@ -45,7 +45,7 @@
 					</ul>
 				</nav>
 
-				<div class="header__autorize">Вхід / Зареєструватися</div>
+				<div class="header__autorize btn" onclick="openAutorize()">Вхід / Зареєструватися</div>
 
 			</header>
 			<!-- search -->
@@ -81,6 +81,42 @@
 				</div>
 			</div>
 			<!-- /search -->
+			<!-- autorize popup -->
+			<div class="autorize-popup-wrapper">
+				<div class="autorize-popup">
+					<div class="close-autorize"><img onclick="closeAutorize()" src="img/icons/close-img.svg"
+							alt="close autorize"></div>
+					<div class="login">
+						<input type="text" placeholder="Ім'я користувача">
+						<input type="password" placeholder="Пароль">
+						<button class="btn-login">Увійти</button>
+					</div>
+					<div class="create-account">
+						<div class="create-account__question">Не зареєстрований?</div>
+						<div class="create-account__link" onclick="openCreateAcc()">Свторити акаунт</div>
+					</div>
+				</div>
+			</div>
+			<!-- /autorize popup -->
+			<!-- createAcc popup -->
+			<div class="create-acc-popup-wrapper">
+				<div class="create-acc-popup">
+					<div class="close-create-acc"><img onclick="closeCreateAcc()" src="img/icons/close-img.svg"
+							alt="close registration"></div>
+					<div class="create-acc">
+						<input type="text" placeholder="Ім'я користувача">
+						<input type="text" placeholder="E-mail">
+						<input type="text" placeholder="Номер телефону">
+						<input type="password" placeholder="Пароль">
+						<button class="btn-create-acc">Зареєструватись</button>
+					</div>
+					<div class="to-login">
+						<div class="to-login__question">Вже зареєстрований?</div>
+						<div class="to-login__link" onclick="openAutorize()">Вхід</div>
+					</div>
+				</div>
+			</div>
+			<!-- /createAcc popup -->
 			<!-- arch-content -->
 			<div class="proj-content-wrapper">
 
@@ -106,8 +142,13 @@
 							<div class="article-content">
 								<div class="article-date">07.02.2019</div>
 								<div class="article-title">Організація поїздки сиріт до дитячого табору у Болгарії</div>
-								<div class="article-text">Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.</div>
-								<div class="article-helped">Допомогли: Ім’я Фамілія, ВАТ “Фірма 1”, Ім’я Фамілія 4, ВАТ “Фірма 3”</div>
+								<div class="article-text">Перебуваючи у сиротинцях ці діти мають різного роду
+									матеріальні та нематеріальні потреби, якими зазвичай ніхто не займається. Ті, хто
+									має займатися утриманням дитячих будинків, опікою над дітьми часто забувають про
+									свій обов’язок або ж отримують недостатнє фінансування від держави. Тому вся надія
+									цих діточок покладається на небайдужих людей, волонтерів, благодійні фонди.</div>
+								<div class="article-helped">Допомогли: Ім’я Фамілія, ВАТ “Фірма 1”, Ім’я Фамілія 4, ВАТ
+									“Фірма 3”</div>
 							</div>
 							<div class="article-icons">
 								<img class="pointer" src="img/icons/projects/hand.svg" alt="to do">
@@ -164,6 +205,9 @@
 
 		</div>
 		<div class="chat pointer"><img src="img/icons/chat.svg" alt="chat"></div>
+		<!--scripts links  -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/jquery.maskedinput.min.js"></script>
 		<script src="js/index.js"></script>
 
 </body>
